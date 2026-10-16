@@ -31,8 +31,8 @@
     "react-test-renderer": "^18.2.0",
     "simple-git-hooks": "^2.13.1",
     "typescript": "^5.3.3",
-    "vite": "^7.3.5",
-    "vitest": "4.1.11"
+    "vite": "^4.4.9",
+    "vitest": "0.34.3"
   },
   "scripts": {
     "dev": "vite",
