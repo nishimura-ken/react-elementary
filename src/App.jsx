@@ -9,9 +9,19 @@ export const App = () => {
 
   const [dogUrl, setDogUrl] = useState("https://images.dog.ceo/breeds/spaniel-brittany/n02101388_6057.jpg")
  
-  const btnClick = () => {
-    setDogUrl("https://images.dog.ceo/breeds/hound-english/n02089973_1132.jpg")
-    console.log("onclick")
+  //　クリックイベント
+  const btnClick = async () => {
+    const dogurl = await fetchDogUrl()
+    setDogUrl(dogurl.message)
+    console.log(dogurl.message)
+  }
+
+  //　Fetchによる犬の画像取得
+  const fetchDogUrl = async() => {
+    const response = await fetch('https://dog.ceo/api/breeds/image/random')
+    if (!response.ok)
+      throw new Error('fetch error')
+    return response.json()
   }
 
   return (
