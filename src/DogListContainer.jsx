@@ -1,5 +1,6 @@
 // @ts-check
-import { useState, useEffect } from 'react' 
+import { useState, useEffect } from 'react'
+import BreedsSelect from './BreedsSelect'
 
 export const DogListContainer = () => {
 
@@ -26,13 +27,7 @@ export const DogListContainer = () => {
   }, [])
 
   return <>
-   <select>
-      { breeds.map((breed) => (
-        <option key={breed} value={breed}>
-          {breed}
-        </option>
-      )) }
-    </select>
+    <BreedsSelect breeds={breeds}/>
   </>
 }
 
