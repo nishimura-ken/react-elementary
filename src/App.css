@@ -30,6 +30,12 @@ img {
   border-radius: 8px;
 }
 
+.control {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 button {
   display: block;
   margin: 10px auto;
@@ -46,11 +52,20 @@ button:hover {
 }
 
 select {
-  width: 40%;
+  max-width: 240px;
   padding: 5px;
   margin-top: 10px;
   margin-bottom: 10px;
+  text-align: center;
   border: 1px solid #ccc;
   border-radius: 6px;
   font-size: 16px;
+}
+
+.control button {
+  margin: 10px;
+}
+
+.control select {
+  margin: 10px;
 }

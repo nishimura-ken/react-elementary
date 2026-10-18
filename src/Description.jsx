@@ -8,9 +8,8 @@ export const Description = () => {
  
   //　クリックイベント
   const btnClick = async () => {
-    const dogurl = await fetchDogUrl()
-    setDogUrl(dogurl.message)
-    console.log(dogurl.message)
+    const data = await fetchDogUrl()
+    setDogUrl(data.message)
   }
 
   //　Fetchによる犬の画像取得
