@@ -2,6 +2,7 @@
 import './App.css'
 import Header from './Header'
 import Description from './Description'
+import DogListContainer from './DogListContainer'
 
 /**
  * @type {() => JSX.Element}
@@ -9,9 +10,12 @@ import Description from './Description'
 export const App = () => {
 
   return (
-    <div>
+    <div className='app'>
       <Header />
-      <Description />
+      <main className='content'>
+        <Description />
+        <DogListContainer />
+      </main>
     </div>
   )
 }
